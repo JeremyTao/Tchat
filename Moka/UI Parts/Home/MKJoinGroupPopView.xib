@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MKJoinGroupPopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwr-en-Ob2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="darkBackgroundButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="CMe-hm-RP3"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wtu-MR-jbv">
+                    <rect key="frame" x="62" y="146" width="250" height="175"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpT-vp-Mmo">
+                            <rect key="frame" x="20" y="50" width="210" height="0.0"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="QXR-Ai-1jK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入支付密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ast-lh-6fu">
+                            <rect key="frame" x="68" y="15" width="114.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00MKC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXZ-Kr-9lL">
+                            <rect key="frame" x="86" y="65" width="79" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-5I-4Gg" customClass="MQVerCodeInputView">
+                            <rect key="frame" x="20" y="118" width="210" height="39"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8j-oe-5PO">
+                            <rect key="frame" x="45.5" y="93" width="159.5" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="3oL-G3-PCU"/>
+                                <constraint firstAttribute="width" constant="159.5" id="Wno-d4-BYY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="v4b-5I-4Gg" firstAttribute="leading" secondItem="Wtu-MR-jbv" secondAttribute="leading" constant="20" id="D3p-Vs-PX9"/>
+                        <constraint firstItem="ast-lh-6fu" firstAttribute="centerX" secondItem="Wtu-MR-jbv" secondAttribute="centerX" id="Lf8-B9-dHF"/>
+                        <constraint firstAttribute="width" constant="250" id="ML9-hR-F7W"/>
+                        <constraint firstItem="xpT-vp-Mmo" firstAttribute="top" secondItem="Wtu-MR-jbv" secondAttribute="top" constant="50" id="NvX-5D-HgT"/>
+                        <constraint firstAttribute="height" constant="175" id="Qbk-ym-qDL"/>
+                        <constraint firstItem="xXZ-Kr-9lL" firstAttribute="centerX" secondItem="Wtu-MR-jbv" secondAttribute="centerX" id="RR0-j0-C2w"/>
+                        <constraint firstItem="xXZ-Kr-9lL" firstAttribute="top" secondItem="Wtu-MR-jbv" secondAttribute="top" constant="65" id="VG0-J0-Jns"/>
+                        <constraint firstItem="Y8j-oe-5PO" firstAttribute="centerX" secondItem="Wtu-MR-jbv" secondAttribute="centerX" id="dZ0-ym-srT"/>
+                        <constraint firstItem="ast-lh-6fu" firstAttribute="top" secondItem="Wtu-MR-jbv" secondAttribute="top" constant="15" id="hMP-Id-9kt"/>
+                        <constraint firstAttribute="bottom" secondItem="v4b-5I-4Gg" secondAttribute="bottom" constant="18" id="lTj-VK-9KO"/>
+                        <constraint firstAttribute="trailing" secondItem="v4b-5I-4Gg" secondAttribute="trailing" constant="20" id="mg2-mm-von"/>
+                        <constraint firstItem="Y8j-oe-5PO" firstAttribute="top" secondItem="xXZ-Kr-9lL" secondAttribute="bottom" constant="5" id="pCC-d0-fXG"/>
+                        <constraint firstAttribute="trailing" secondItem="xpT-vp-Mmo" secondAttribute="trailing" constant="20" id="tsL-EC-LJb"/>
+                        <constraint firstItem="xpT-vp-Mmo" firstAttribute="leading" secondItem="Wtu-MR-jbv" secondAttribute="leading" constant="20" id="uRE-Te-Rkk"/>
+                        <constraint firstItem="v4b-5I-4Gg" firstAttribute="top" secondItem="Y8j-oe-5PO" secondAttribute="bottom" constant="13" id="wxk-SE-foD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wtu-MR-jbv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6Zy-M9-drG"/>
+                <constraint firstAttribute="trailing" secondItem="Jwr-en-Ob2" secondAttribute="trailing" id="DTD-2s-aR5"/>
+                <constraint firstAttribute="bottom" secondItem="Jwr-en-Ob2" secondAttribute="bottom" id="SJk-JG-nNw"/>
+                <constraint firstItem="Wtu-MR-jbv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="Wdj-1I-gLx"/>
+                <constraint firstItem="Jwr-en-Ob2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dEf-2x-Hsm"/>
+                <constraint firstItem="Jwr-en-Ob2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="etp-db-rsi"/>
+            </constraints>
+            <connections>
+                <outlet property="alipayFeeLabel" destination="Y8j-oe-5PO" id="dSg-Na-YAm"/>
+                <outlet property="darkBackgoundButton" destination="Jwr-en-Ob2" id="ux7-il-j2n"/>
+                <outlet property="inputView" destination="v4b-5I-4Gg" id="iKe-tv-5C4"/>
+                <outlet property="payLabel" destination="xXZ-Kr-9lL" id="nRj-Io-Uph"/>
+                <outlet property="popUpView" destination="Wtu-MR-jbv" id="ouV-ZF-yiB"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

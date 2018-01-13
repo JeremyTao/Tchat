@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKSelectTagsViewController">
+            <connections>
+                <outlet property="collectionViewHeight" destination="OeF-Zf-U2T" id="4mt-E3-yKO"/>
+                <outlet property="myCollectionView" destination="PPN-tp-sz2" id="Oiy-G6-zXI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5e-mB-9tO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-OF-t5e">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="404"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PPN-tp-sz2">
+                                    <rect key="frame" x="20" y="64" width="335" height="240"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="240" id="OeF-Zf-U2T"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HiP-yi-MgM" customClass="IBTopSearchFlowLayout">
+                                        <size key="itemSize" width="50" height="50"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="PPN-tp-sz2" firstAttribute="top" secondItem="dcm-OF-t5e" secondAttribute="top" constant="64" id="cvQ-IB-0Yo"/>
+                                <constraint firstAttribute="trailing" secondItem="PPN-tp-sz2" secondAttribute="trailing" constant="20" id="die-pQ-T89"/>
+                                <constraint firstItem="PPN-tp-sz2" firstAttribute="leading" secondItem="dcm-OF-t5e" secondAttribute="leading" constant="20" id="lcD-EE-uqW"/>
+                                <constraint firstAttribute="bottom" secondItem="PPN-tp-sz2" secondAttribute="bottom" constant="100" id="v1Y-KK-JEd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="dcm-OF-t5e" firstAttribute="centerX" secondItem="e5e-mB-9tO" secondAttribute="centerX" id="2bo-KE-RM1"/>
+                        <constraint firstAttribute="trailing" secondItem="dcm-OF-t5e" secondAttribute="trailing" id="BDz-Ab-OY4"/>
+                        <constraint firstItem="dcm-OF-t5e" firstAttribute="top" secondItem="e5e-mB-9tO" secondAttribute="top" id="nGW-5l-Gef"/>
+                        <constraint firstAttribute="bottom" secondItem="dcm-OF-t5e" secondAttribute="bottom" id="ptk-0V-3Ex"/>
+                        <constraint firstItem="dcm-OF-t5e" firstAttribute="leading" secondItem="e5e-mB-9tO" secondAttribute="leading" id="wwx-pA-GgA"/>
+                    </constraints>
+                </scrollView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHQ-Op-vC4">
+                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Tb-cO-i6y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Unr-7T-xbc"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4v-na-bOw">
+                    <rect key="frame" x="37.5" y="602" width="300" height="50"/>
+                    <color key="backgroundColor" red="0.47058823529999999" green="0.58039215690000001" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="rxO-TV-JHI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <state key="normal" title="开始体验">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="startMokaButtonClicked:" destination="-1" eventType="touchUpInside" id="UqV-8Q-YMp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e5e-mB-9tO" secondAttribute="trailing" id="5Y7-Wv-z9J"/>
+                <constraint firstAttribute="bottom" secondItem="xHQ-Op-vC4" secondAttribute="bottom" id="AJm-z5-MgN"/>
+                <constraint firstAttribute="trailing" secondItem="xHQ-Op-vC4" secondAttribute="trailing" id="Jf8-HA-5eC"/>
+                <constraint firstItem="xHQ-Op-vC4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vbs-zu-OZu"/>
+                <constraint firstItem="g4v-na-bOw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37.5" id="Yxd-ka-k07"/>
+                <constraint firstAttribute="bottom" secondItem="g4v-na-bOw" secondAttribute="bottom" constant="15" id="goM-cn-cng"/>
+                <constraint firstAttribute="trailing" secondItem="g4v-na-bOw" secondAttribute="trailing" constant="37.5" id="gvI-Ku-gvU"/>
+                <constraint firstItem="e5e-mB-9tO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hlE-Hl-Mrm"/>
+                <constraint firstItem="e5e-mB-9tO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ocG-yT-6jS"/>
+                <constraint firstAttribute="bottom" secondItem="e5e-mB-9tO" secondAttribute="bottom" id="pN5-GN-YzB"/>
+                <constraint firstItem="g4v-na-bOw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sLg-lF-UJB"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

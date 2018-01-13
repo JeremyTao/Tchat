@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="MKCreateCircleTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Em-tY-epP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="near_cell" translatesAutoresizingMaskIntoConstraints="NO" id="r5n-Yo-jby">
+                                <rect key="frame" x="10" y="0.0" width="355" height="75.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建圈子" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOn-hc-rP1">
+                                <rect key="frame" x="82" y="19" width="65.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_new_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-51-p9y">
+                                <rect key="frame" x="28" y="16" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OD7-V0-VQT"/>
+                                    <constraint firstAttribute="width" constant="44" id="rcg-sy-nUD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forword" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-Ma-tMl">
+                                <rect key="frame" x="321" y="25" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="MOm-j6-FWS"/>
+                                    <constraint firstAttribute="height" constant="24" id="dIQ-1M-MXu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="让更多的朋友加入你的圈子吧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaF-BO-vdf">
+                                <rect key="frame" x="82" y="45" width="159.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nOn-hc-rP1" firstAttribute="leading" secondItem="Fkr-51-p9y" secondAttribute="trailing" constant="10" id="0fP-cX-MiS"/>
+                            <constraint firstItem="nOn-hc-rP1" firstAttribute="top" secondItem="Fkr-51-p9y" secondAttribute="top" constant="3" id="CAR-QS-X9g"/>
+                            <constraint firstItem="oJ7-Ma-tMl" firstAttribute="centerY" secondItem="0Em-tY-epP" secondAttribute="centerY" id="MGL-ra-BT9"/>
+                            <constraint firstAttribute="trailing" secondItem="oJ7-Ma-tMl" secondAttribute="trailing" constant="30" id="aK2-BM-VL4"/>
+                            <constraint firstAttribute="trailing" secondItem="r5n-Yo-jby" secondAttribute="trailing" constant="10" id="h6w-M3-PeE"/>
+                            <constraint firstItem="Fkr-51-p9y" firstAttribute="leading" secondItem="0Em-tY-epP" secondAttribute="leading" constant="28" id="kh9-Rd-fU4"/>
+                            <constraint firstItem="HaF-BO-vdf" firstAttribute="leading" secondItem="nOn-hc-rP1" secondAttribute="leading" id="koa-6c-jpJ"/>
+                            <constraint firstItem="r5n-Yo-jby" firstAttribute="top" secondItem="0Em-tY-epP" secondAttribute="top" id="lyU-SU-btf"/>
+                            <constraint firstItem="Fkr-51-p9y" firstAttribute="centerY" secondItem="0Em-tY-epP" secondAttribute="centerY" id="r6O-Ky-D2Y"/>
+                            <constraint firstAttribute="bottom" secondItem="r5n-Yo-jby" secondAttribute="bottom" id="wv2-29-3RQ"/>
+                            <constraint firstItem="HaF-BO-vdf" firstAttribute="bottom" secondItem="Fkr-51-p9y" secondAttribute="bottom" id="z0V-d5-eAw"/>
+                            <constraint firstItem="r5n-Yo-jby" firstAttribute="leading" secondItem="0Em-tY-epP" secondAttribute="leading" constant="10" id="zwj-am-sVS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="0Em-tY-epP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="98I-d4-hzP"/>
+                    <constraint firstAttribute="trailing" secondItem="0Em-tY-epP" secondAttribute="trailing" id="gaF-Tu-be9"/>
+                    <constraint firstItem="0Em-tY-epP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hD1-t5-2yX"/>
+                    <constraint firstAttribute="bottom" secondItem="0Em-tY-epP" secondAttribute="bottom" id="tIw-5b-Hyo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="61.5" y="70"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="create_new_circle" width="50" height="50"/>
+        <image name="forword" width="44" height="44"/>
+        <image name="near_cell" width="722" height="220"/>
+    </resources>
+</document>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MKSayHelloPopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ju-HL-uQO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="darkBackgroundButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="PCr-5H-qj6"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2A-Ou-SWi">
+                    <rect key="frame" x="62" y="214" width="250" height="240"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="evQ-mK-g2q">
+                            <rect key="frame" x="10" y="10" width="230" height="150"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="Ii3-Vf-kJF"/>
+                                <constraint firstAttribute="width" constant="230" id="Q95-RX-f1T"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW0-eH-uZT">
+                            <rect key="frame" x="135" y="180" width="95" height="40"/>
+                            <color key="backgroundColor" red="0.47058823529999999" green="0.58039215690000001" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="PEA-Qp-458"/>
+                            </constraints>
+                            <state key="normal" title="送礼物"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="giveButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="nJI-Lo-vPi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-BA-KPG">
+                            <rect key="frame" x="20" y="180" width="95" height="40"/>
+                            <color key="backgroundColor" red="0.90196078431372551" green="0.28627450980392155" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="就不送"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="darkBackgroundButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="X1v-10-Yo8"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_present" translatesAutoresizingMaskIntoConstraints="NO" id="ke0-IE-LwG">
+                            <rect key="frame" x="55" y="-50" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="140" id="Vgd-VK-NUm"/>
+                                <constraint firstAttribute="width" constant="140" id="ijD-q8-OKe"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送礼物可以提高回复率哦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9g-hq-Ux9">
+                            <rect key="frame" x="46.5" y="130" width="157.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgP-Ga-xcJ">
+                            <rect key="frame" x="106" y="100" width="40" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.47058823529999999" green="0.58039215690000001" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pW0-eH-uZT" firstAttribute="height" secondItem="ng3-BA-KPG" secondAttribute="height" id="2Vt-ax-p5G"/>
+                        <constraint firstItem="pW0-eH-uZT" firstAttribute="width" secondItem="ng3-BA-KPG" secondAttribute="width" id="7eM-hx-tsl"/>
+                        <constraint firstItem="U9g-hq-Ux9" firstAttribute="top" secondItem="lgP-Ga-xcJ" secondAttribute="bottom" constant="10" id="Blv-D5-yAe"/>
+                        <constraint firstItem="U9g-hq-Ux9" firstAttribute="centerX" secondItem="u2A-Ou-SWi" secondAttribute="centerX" id="CtQ-ad-9S2"/>
+                        <constraint firstItem="evQ-mK-g2q" firstAttribute="centerX" secondItem="u2A-Ou-SWi" secondAttribute="centerX" id="FvZ-Ud-DAA"/>
+                        <constraint firstItem="lgP-Ga-xcJ" firstAttribute="top" secondItem="ke0-IE-LwG" secondAttribute="bottom" constant="10" id="HHP-sK-hDq"/>
+                        <constraint firstItem="evQ-mK-g2q" firstAttribute="top" secondItem="u2A-Ou-SWi" secondAttribute="top" constant="10" id="JRe-6M-HZh"/>
+                        <constraint firstItem="ke0-IE-LwG" firstAttribute="centerX" secondItem="u2A-Ou-SWi" secondAttribute="centerX" id="MTV-Qf-lVX"/>
+                        <constraint firstItem="pW0-eH-uZT" firstAttribute="centerY" secondItem="ng3-BA-KPG" secondAttribute="centerY" id="MVB-I6-8WO"/>
+                        <constraint firstAttribute="width" constant="250" id="Pii-vY-dHX"/>
+                        <constraint firstItem="pW0-eH-uZT" firstAttribute="trailing" secondItem="evQ-mK-g2q" secondAttribute="trailing" constant="-10" id="QC7-ch-NvX"/>
+                        <constraint firstItem="pW0-eH-uZT" firstAttribute="leading" secondItem="ng3-BA-KPG" secondAttribute="trailing" constant="20" id="QfE-v3-lfV"/>
+                        <constraint firstItem="ng3-BA-KPG" firstAttribute="leading" secondItem="evQ-mK-g2q" secondAttribute="leading" constant="10" id="TLw-YD-mxE"/>
+                        <constraint firstItem="ng3-BA-KPG" firstAttribute="top" secondItem="ke0-IE-LwG" secondAttribute="bottom" constant="90" id="TqM-9y-r18"/>
+                        <constraint firstAttribute="height" constant="240" id="akB-L9-0Zj"/>
+                        <constraint firstItem="lgP-Ga-xcJ" firstAttribute="centerX" secondItem="u2A-Ou-SWi" secondAttribute="centerX" id="mio-5g-KSy"/>
+                        <constraint firstItem="lgP-Ga-xcJ" firstAttribute="centerX" secondItem="u2A-Ou-SWi" secondAttribute="centerX" id="t2x-H7-9y6"/>
+                        <constraint firstItem="ng3-BA-KPG" firstAttribute="top" secondItem="evQ-mK-g2q" secondAttribute="bottom" constant="20" id="v6X-sw-I0B"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1ju-HL-uQO" secondAttribute="trailing" id="J7c-DF-PfF"/>
+                <constraint firstItem="u2A-Ou-SWi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ciY-5b-0pR"/>
+                <constraint firstItem="1ju-HL-uQO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fQ9-oi-p2q"/>
+                <constraint firstItem="1ju-HL-uQO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hOv-XK-D7J"/>
+                <constraint firstItem="u2A-Ou-SWi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ibu-iy-AXX"/>
+                <constraint firstAttribute="bottom" secondItem="1ju-HL-uQO" secondAttribute="bottom" id="nas-G0-HfV"/>
+            </constraints>
+            <connections>
+                <outlet property="darkBackgoundButton" destination="1ju-HL-uQO" id="Qex-1I-e5O"/>
+                <outlet property="popUpView" destination="u2A-Ou-SWi" id="sV6-Wj-XLT"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chat_present" width="100" height="100"/>
+    </resources>
+</document>

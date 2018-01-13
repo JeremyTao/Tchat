@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKFollowListViewController">
+            <connections>
+                <outlet property="myTableView" destination="XCz-Sc-heu" id="gjd-Cg-pcd"/>
+                <outlet property="noDataView" destination="0bi-qr-WNP" id="b2g-q1-3KT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XCz-Sc-heu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bi-qr-WNP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_follow" translatesAutoresizingMaskIntoConstraints="NO" id="Dyy-Zu-JsK">
+                            <rect key="frame" x="132.5" y="120" width="110" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="47F-KK-UYp"/>
+                                <constraint firstAttribute="height" constant="110" id="fps-ds-GUg"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你还没有关注的人哦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr7-gC-iMp">
+                            <rect key="frame" x="123.5" y="250" width="129" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zr7-gC-iMp" firstAttribute="top" secondItem="Dyy-Zu-JsK" secondAttribute="bottom" constant="20" id="EmD-kI-JCb"/>
+                        <constraint firstItem="zr7-gC-iMp" firstAttribute="centerX" secondItem="0bi-qr-WNP" secondAttribute="centerX" id="Ur3-hz-PCG"/>
+                        <constraint firstItem="Dyy-Zu-JsK" firstAttribute="top" secondItem="0bi-qr-WNP" secondAttribute="top" constant="120" id="fts-fa-SIK"/>
+                        <constraint firstItem="Dyy-Zu-JsK" firstAttribute="centerX" secondItem="0bi-qr-WNP" secondAttribute="centerX" id="hp3-Cp-Qdp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="0bi-qr-WNP" firstAttribute="trailing" secondItem="XCz-Sc-heu" secondAttribute="trailing" id="35T-Mv-8It"/>
+                <constraint firstItem="XCz-Sc-heu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3tg-Hu-s0r"/>
+                <constraint firstItem="XCz-Sc-heu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AvF-5d-YyK"/>
+                <constraint firstItem="0bi-qr-WNP" firstAttribute="leading" secondItem="XCz-Sc-heu" secondAttribute="leading" id="Dxh-Bz-Yvz"/>
+                <constraint firstAttribute="trailing" secondItem="XCz-Sc-heu" secondAttribute="trailing" id="EOL-es-lHi"/>
+                <constraint firstItem="0bi-qr-WNP" firstAttribute="bottom" secondItem="XCz-Sc-heu" secondAttribute="bottom" id="Ed4-U5-iKk"/>
+                <constraint firstItem="0bi-qr-WNP" firstAttribute="top" secondItem="XCz-Sc-heu" secondAttribute="top" id="apL-wO-2gn"/>
+                <constraint firstAttribute="bottom" secondItem="XCz-Sc-heu" secondAttribute="bottom" id="r5Q-Tm-dlR"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="no_follow" width="111" height="91"/>
+    </resources>
+</document>

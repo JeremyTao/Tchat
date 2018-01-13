@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MKGuideView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyU-wV-GBu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="darkBackgroundButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ix3-TG-Xnp"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_nearby" translatesAutoresizingMaskIntoConstraints="NO" id="MOp-uL-CDd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FyU-wV-GBu" secondAttribute="trailing" id="Azs-IM-3Ih"/>
+                <constraint firstItem="MOp-uL-CDd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CW9-tH-a0q"/>
+                <constraint firstAttribute="bottom" secondItem="FyU-wV-GBu" secondAttribute="bottom" id="Mw1-ik-2ra"/>
+                <constraint firstAttribute="bottom" secondItem="MOp-uL-CDd" secondAttribute="bottom" id="Q2P-xD-nnb"/>
+                <constraint firstItem="FyU-wV-GBu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QUq-ed-S2I"/>
+                <constraint firstItem="FyU-wV-GBu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SWR-Sm-kGe"/>
+                <constraint firstItem="MOp-uL-CDd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WMN-ad-LcV"/>
+                <constraint firstAttribute="trailing" secondItem="MOp-uL-CDd" secondAttribute="trailing" id="ub3-Qm-Zm2"/>
+            </constraints>
+            <connections>
+                <outlet property="guideImageView" destination="MOp-uL-CDd" id="mLF-O1-HaJ"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="guide_nearby" width="375" height="675"/>
+    </resources>
+</document>

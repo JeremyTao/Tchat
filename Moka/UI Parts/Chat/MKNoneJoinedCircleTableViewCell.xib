@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="271" id="KGk-i7-Jjw" customClass="MKNoneJoinedCircleTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="271"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="270.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsb-7I-FDv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="270.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="near_cell" translatesAutoresizingMaskIntoConstraints="NO" id="RRM-4D-5UW">
+                                <rect key="frame" x="10" y="0.0" width="355" height="270.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_circle" translatesAutoresizingMaskIntoConstraints="NO" id="bVk-2o-GDW">
+                                <rect key="frame" x="132" y="30" width="111" height="91"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你还未加入任何圈子" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ7-BE-LeK">
+                                <rect key="frame" x="132.5" y="141" width="110.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIN-ys-GwO">
+                                <rect key="frame" x="137.5" y="185.5" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.58039215690000001" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6UH-9d-QeD"/>
+                                    <constraint firstAttribute="width" constant="100" id="rCM-s5-usK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="看看推荐的圈子"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="seeRecomandCircles:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zm1-9A-ZRM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vQ7-BE-LeK" firstAttribute="top" secondItem="bVk-2o-GDW" secondAttribute="bottom" constant="20" id="0gO-ak-mlp"/>
+                            <constraint firstItem="bVk-2o-GDW" firstAttribute="top" secondItem="zsb-7I-FDv" secondAttribute="top" constant="30" id="37P-3y-Ynf"/>
+                            <constraint firstItem="RRM-4D-5UW" firstAttribute="leading" secondItem="zsb-7I-FDv" secondAttribute="leading" constant="10" id="3fI-KB-iOz"/>
+                            <constraint firstItem="bVk-2o-GDW" firstAttribute="centerX" secondItem="zsb-7I-FDv" secondAttribute="centerX" id="C5A-ZD-6Ms"/>
+                            <constraint firstAttribute="bottom" secondItem="RRM-4D-5UW" secondAttribute="bottom" id="CKi-mk-oEW"/>
+                            <constraint firstItem="RRM-4D-5UW" firstAttribute="top" secondItem="zsb-7I-FDv" secondAttribute="top" id="YTW-Vy-Nsd"/>
+                            <constraint firstAttribute="trailing" secondItem="RRM-4D-5UW" secondAttribute="trailing" constant="10" id="bn1-5p-YKK"/>
+                            <constraint firstItem="vQ7-BE-LeK" firstAttribute="centerX" secondItem="zsb-7I-FDv" secondAttribute="centerX" id="cML-tk-LhS"/>
+                            <constraint firstItem="uIN-ys-GwO" firstAttribute="centerX" secondItem="zsb-7I-FDv" secondAttribute="centerX" id="hCK-MU-wvk"/>
+                            <constraint firstItem="uIN-ys-GwO" firstAttribute="top" secondItem="vQ7-BE-LeK" secondAttribute="bottom" constant="30" id="xDi-8C-h1z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="zsb-7I-FDv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PPe-4V-p8b"/>
+                    <constraint firstAttribute="trailing" secondItem="zsb-7I-FDv" secondAttribute="trailing" id="Svq-pS-QDo"/>
+                    <constraint firstAttribute="bottom" secondItem="zsb-7I-FDv" secondAttribute="bottom" id="dsF-Rm-w4Z"/>
+                    <constraint firstItem="zsb-7I-FDv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="y97-R5-GuG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="61.5" y="167.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="near_cell" width="722" height="220"/>
+        <image name="no_circle" width="111" height="91"/>
+    </resources>
+</document>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKRechargeCoinsViewController">
+            <connections>
+                <outlet property="myAdressLabel" destination="1Ng-gv-8XN" id="7s7-Df-8bf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="warnLabel" destination="gcU-tz-ok6" id="kX2-hj-05D"/>
+                <outlet property="warnLabel1" destination="1Xa-8v-jER" id="PwR-yK-rLp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="钛值转入地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBi-3h-Up2">
+                    <rect key="frame" x="22" y="15" width="86" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="WCF-9q-j0p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcU-bg-B55">
+                    <rect key="frame" x="0.0" y="42" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的地址" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-gv-8XN">
+                            <rect key="frame" x="22" y="10" width="331" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1Ng-gv-8XN" firstAttribute="leading" secondItem="vcU-bg-B55" secondAttribute="leading" constant="22" id="7lJ-ME-Pty"/>
+                        <constraint firstAttribute="height" constant="60" id="fuY-UT-SAS"/>
+                        <constraint firstItem="1Ng-gv-8XN" firstAttribute="top" secondItem="vcU-bg-B55" secondAttribute="top" constant="10" id="hMa-SV-RGz"/>
+                        <constraint firstAttribute="bottom" secondItem="1Ng-gv-8XN" secondAttribute="bottom" constant="10" id="lhf-Pv-X82"/>
+                        <constraint firstAttribute="trailing" secondItem="1Ng-gv-8XN" secondAttribute="trailing" constant="22" id="uiQ-6A-KlQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUl-Zt-aeq">
+                    <rect key="frame" x="0.0" y="132" width="375" height="325"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcU-tz-ok6">
+                            <rect key="frame" x="12" y="0.0" width="351" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="OwH-DB-PwQ"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="注：这是您的钛值（TV）充值地址，请将您的钛值（TV）转入此地址，并务必在备注框中填写您注册钛值APP的手机号，填写错误将无法到账！！！">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qct-tz-mDs">
+                            <rect key="frame" x="12" y="60" width="351" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="7G2-pT-BxS"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="1. 备注错误或未填写备注将无法到账。">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-9A-hio">
+                            <rect key="frame" x="12" y="80" width="351" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="dD2-aW-dR1"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="2. 若对方平台无填写备注处，可先提币到个人钱包，再通过钱包填写备注后转入钛值APP此地址即可。">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btD-jW-Tci">
+                            <rect key="frame" x="12" y="120" width="351" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="vwR-Cn-4Wz"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="转入说明：">
+                                    <attributes>
+                                        <font key="NSFont" size="14" name="STSongti-SC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htz-21-iSb">
+                            <rect key="frame" x="12" y="140" width="351" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="9rW-2S-EyU"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="1. 钛值（TV）转账需要整个钛值（TV）网络进行确认，因此">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="每笔转账需预留至少0.01个钛值在原地址">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="，达到30个确认后您的钛值（TV）会自动充值到您的账户中。">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xa-8v-jER">
+                            <rect key="frame" x="12" y="200" width="351" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="av7-tH-EyF"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="2. 您在操作钛值钱包向此地址转账时，">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="务必填上备注信息：您钛值APP的手机号">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="，否则将无法到账。">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p07-mx-tEp">
+                            <rect key="frame" x="12" y="240" width="351" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3mw-Bp-sNX"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="3. 此地址禁止充值除钛值（TV）以外的其他任何币种，否则丢失将无法找回，责任自负。">
+                                    <attributes>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIC-iS-wmb">
+                            <rect key="frame" x="12" y="280" width="351" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Y4w-4v-Qnu"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="注：APP内部用户之间不支持利用钱包相互转账，请使用APP内的发红包功能相互转账。">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="STSongti-SC-Regular"/>
+                                        <real key="NSKern" value="0.0"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="21" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <tabStops/>
+                                        </paragraphStyle>
+                                        <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="btD-jW-Tci" firstAttribute="trailing" secondItem="B3U-9A-hio" secondAttribute="trailing" id="0Jt-JE-tUV"/>
+                        <constraint firstItem="gcU-tz-ok6" firstAttribute="leading" secondItem="lUl-Zt-aeq" secondAttribute="leading" constant="12" id="3Ur-CC-Z0e"/>
+                        <constraint firstAttribute="height" constant="325" id="B2z-G4-X2C"/>
+                        <constraint firstItem="btD-jW-Tci" firstAttribute="top" secondItem="B3U-9A-hio" secondAttribute="bottom" id="DvD-EF-ECG"/>
+                        <constraint firstItem="Htz-21-iSb" firstAttribute="leading" secondItem="btD-jW-Tci" secondAttribute="leading" id="FXs-b1-I7W"/>
+                        <constraint firstItem="qct-tz-mDs" firstAttribute="trailing" secondItem="gcU-tz-ok6" secondAttribute="trailing" id="Fqi-go-dLL"/>
+                        <constraint firstItem="p07-mx-tEp" firstAttribute="leading" secondItem="1Xa-8v-jER" secondAttribute="leading" id="IAH-Vl-4cM"/>
+                        <constraint firstItem="QIC-iS-wmb" firstAttribute="trailing" secondItem="p07-mx-tEp" secondAttribute="trailing" id="IJZ-1j-TNu"/>
+                        <constraint firstItem="QIC-iS-wmb" firstAttribute="top" secondItem="p07-mx-tEp" secondAttribute="bottom" id="LqC-6e-zs5"/>
+                        <constraint firstItem="B3U-9A-hio" firstAttribute="trailing" secondItem="qct-tz-mDs" secondAttribute="trailing" id="Ovt-cw-y47"/>
+                        <constraint firstItem="qct-tz-mDs" firstAttribute="leading" secondItem="gcU-tz-ok6" secondAttribute="leading" id="PKb-NO-Ipy"/>
+                        <constraint firstItem="1Xa-8v-jER" firstAttribute="trailing" secondItem="Htz-21-iSb" secondAttribute="trailing" id="c72-Cp-c6y"/>
+                        <constraint firstItem="p07-mx-tEp" firstAttribute="trailing" secondItem="1Xa-8v-jER" secondAttribute="trailing" id="dz8-lb-zih"/>
+                        <constraint firstItem="1Xa-8v-jER" firstAttribute="top" secondItem="Htz-21-iSb" secondAttribute="bottom" id="eDc-VB-bIV"/>
+                        <constraint firstItem="B3U-9A-hio" firstAttribute="top" secondItem="qct-tz-mDs" secondAttribute="bottom" id="fdY-bR-OsI"/>
+                        <constraint firstAttribute="trailing" secondItem="gcU-tz-ok6" secondAttribute="trailing" constant="12" id="gh8-uI-gCu"/>
+                        <constraint firstItem="QIC-iS-wmb" firstAttribute="leading" secondItem="p07-mx-tEp" secondAttribute="leading" id="gpZ-iI-01e"/>
+                        <constraint firstItem="gcU-tz-ok6" firstAttribute="top" secondItem="lUl-Zt-aeq" secondAttribute="top" id="kOS-KY-Hcb"/>
+                        <constraint firstItem="Htz-21-iSb" firstAttribute="top" secondItem="btD-jW-Tci" secondAttribute="bottom" id="mMK-Q0-axV"/>
+                        <constraint firstItem="Htz-21-iSb" firstAttribute="trailing" secondItem="btD-jW-Tci" secondAttribute="trailing" id="oo5-uU-gF6"/>
+                        <constraint firstItem="1Xa-8v-jER" firstAttribute="leading" secondItem="Htz-21-iSb" secondAttribute="leading" id="ruR-y3-Hqy"/>
+                        <constraint firstItem="p07-mx-tEp" firstAttribute="top" secondItem="1Xa-8v-jER" secondAttribute="bottom" id="t05-0f-gn0"/>
+                        <constraint firstItem="qct-tz-mDs" firstAttribute="top" secondItem="gcU-tz-ok6" secondAttribute="bottom" id="tPu-bU-5Jx"/>
+                        <constraint firstItem="B3U-9A-hio" firstAttribute="leading" secondItem="qct-tz-mDs" secondAttribute="leading" id="vop-W6-0Vx"/>
+                        <constraint firstItem="btD-jW-Tci" firstAttribute="leading" secondItem="B3U-9A-hio" secondAttribute="leading" id="z7v-JB-RGX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="vcU-bg-B55" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2yh-bs-Sk9"/>
+                <constraint firstItem="HBi-3h-Up2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="3pf-ok-WXi"/>
+                <constraint firstItem="lUl-Zt-aeq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4AW-iV-BFJ"/>
+                <constraint firstItem="HBi-3h-Up2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="Pmz-z1-f8M"/>
+                <constraint firstAttribute="trailing" secondItem="vcU-bg-B55" secondAttribute="trailing" id="ZLh-k4-oBa"/>
+                <constraint firstItem="vcU-bg-B55" firstAttribute="top" secondItem="HBi-3h-Up2" secondAttribute="bottom" constant="10" id="bh4-nq-3ml"/>
+                <constraint firstItem="lUl-Zt-aeq" firstAttribute="top" secondItem="vcU-bg-B55" secondAttribute="bottom" constant="30" id="pgV-OB-65j"/>
+                <constraint firstAttribute="trailing" secondItem="lUl-Zt-aeq" secondAttribute="trailing" id="t0d-ji-9iA"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

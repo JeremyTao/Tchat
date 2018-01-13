@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKMyFriendsViewController">
+            <connections>
+                <outlet property="myTableView" destination="tPy-Z8-Ogy" id="CiM-xI-2Og"/>
+                <outlet property="noDataLabel" destination="IgI-eC-aRG" id="Wi4-lm-8yf"/>
+                <outlet property="noDataView" destination="Fa4-94-icE" id="ivT-E1-thK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-Z8-Ogy">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fa4-94-icE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_follow" translatesAutoresizingMaskIntoConstraints="NO" id="0j5-Xh-BKi">
+                            <rect key="frame" x="132.5" y="120" width="110" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="4lS-gl-2gF"/>
+                                <constraint firstAttribute="height" constant="110" id="SYW-tG-JCa"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂时没有关注的人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-eC-aRG">
+                            <rect key="frame" x="130.5" y="250" width="114.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0j5-Xh-BKi" firstAttribute="top" secondItem="Fa4-94-icE" secondAttribute="top" constant="120" id="3Bw-E6-JHT"/>
+                        <constraint firstItem="IgI-eC-aRG" firstAttribute="top" secondItem="0j5-Xh-BKi" secondAttribute="bottom" constant="20" id="3bt-x9-tR2"/>
+                        <constraint firstItem="IgI-eC-aRG" firstAttribute="centerX" secondItem="Fa4-94-icE" secondAttribute="centerX" id="Lzy-Qz-kVF"/>
+                        <constraint firstItem="0j5-Xh-BKi" firstAttribute="centerX" secondItem="Fa4-94-icE" secondAttribute="centerX" id="Tbp-zS-j2l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tPy-Z8-Ogy" secondAttribute="bottom" id="1B3-qy-3GK"/>
+                <constraint firstItem="tPy-Z8-Ogy" firstAttribute="bottom" secondItem="Fa4-94-icE" secondAttribute="bottom" id="2mU-wM-7ku"/>
+                <constraint firstItem="tPy-Z8-Ogy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="51n-pi-6H3"/>
+                <constraint firstItem="tPy-Z8-Ogy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="btN-3p-zx8"/>
+                <constraint firstItem="tPy-Z8-Ogy" firstAttribute="trailing" secondItem="Fa4-94-icE" secondAttribute="trailing" id="gEf-RN-TWL"/>
+                <constraint firstItem="tPy-Z8-Ogy" firstAttribute="leading" secondItem="Fa4-94-icE" secondAttribute="leading" id="odx-w9-QxD"/>
+                <constraint firstItem="tPy-Z8-Ogy" firstAttribute="top" secondItem="Fa4-94-icE" secondAttribute="top" id="uNd-me-SGt"/>
+                <constraint firstAttribute="trailing" secondItem="tPy-Z8-Ogy" secondAttribute="trailing" id="yMD-ry-G2K"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="no_follow" width="111" height="91"/>
+    </resources>
+</document>

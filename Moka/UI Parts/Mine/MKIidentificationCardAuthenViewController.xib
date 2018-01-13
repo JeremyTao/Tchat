@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKIidentificationCardAuthenViewController">
+            <connections>
+                <outlet property="cardImageView" destination="wCO-Ex-HB9" id="yho-Ft-XPl"/>
+                <outlet property="hintLabel" destination="z5F-F2-UYA" id="Jep-Nf-uiP"/>
+                <outlet property="popView" destination="CzF-9r-S2d" id="HhN-Kf-Kl9"/>
+                <outlet property="topView" destination="kED-zD-Dyj" id="vlT-eK-Lfn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kED-zD-Dyj">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idcard_front" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-Ex-HB9">
+                            <rect key="frame" x="113.5" y="72" width="360" height="230"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="230" id="82h-Z1-mcd"/>
+                                <constraint firstAttribute="width" constant="360" id="qqi-oJ-DiW"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_back" translatesAutoresizingMaskIntoConstraints="NO" id="1eQ-jy-TMX">
+                            <rect key="frame" x="15" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="cMR-zo-jbF"/>
+                                <constraint firstAttribute="height" constant="20" id="fMk-7P-jsQ"/>
+                            </constraints>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wub-MK-PtZ">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="F1g-o7-IRF"/>
+                                <constraint firstAttribute="width" constant="60" id="cbj-SA-xxc"/>
+                            </constraints>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="chJ-CG-X4p"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拍摄身份证正面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5F-F2-UYA">
+                            <rect key="frame" x="229.5" y="334" width="128.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="z5F-F2-UYA" secondAttribute="bottom" constant="20" id="2Ly-Tk-eTa"/>
+                        <constraint firstItem="Wub-MK-PtZ" firstAttribute="top" secondItem="kED-zD-Dyj" secondAttribute="top" id="6Ot-sc-Go4"/>
+                        <constraint firstItem="z5F-F2-UYA" firstAttribute="centerX" secondItem="wCO-Ex-HB9" secondAttribute="centerX" id="El6-am-EfX"/>
+                        <constraint firstItem="wCO-Ex-HB9" firstAttribute="centerX" secondItem="kED-zD-Dyj" secondAttribute="centerX" constant="-40" id="XNB-3h-qZV"/>
+                        <constraint firstItem="1eQ-jy-TMX" firstAttribute="top" secondItem="kED-zD-Dyj" secondAttribute="top" constant="15" id="b0Z-Ee-W8i"/>
+                        <constraint firstItem="Wub-MK-PtZ" firstAttribute="leading" secondItem="kED-zD-Dyj" secondAttribute="leading" id="j03-F4-tzu"/>
+                        <constraint firstItem="1eQ-jy-TMX" firstAttribute="leading" secondItem="kED-zD-Dyj" secondAttribute="leading" constant="15" id="vcB-W0-ycd"/>
+                        <constraint firstItem="wCO-Ex-HB9" firstAttribute="centerY" secondItem="kED-zD-Dyj" secondAttribute="centerY" id="xIF-6G-7qK"/>
+                    </constraints>
+                </view>
+                <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzF-9r-S2d">
+                    <rect key="frame" x="233" y="117" width="200" height="140"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="36W-Eg-bfX">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="140"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reminder_success" translatesAutoresizingMaskIntoConstraints="NO" id="39q-vR-9OR">
+                                <rect key="frame" x="80" y="24" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="8Or-A5-Vcf"/>
+                                    <constraint firstAttribute="height" constant="40" id="AQn-MI-MXq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsn-8Y-VeH">
+                                <rect key="frame" x="30.5" y="79" width="140" height="33.5"/>
+                                <string key="text">上传成功
+我们将尽快为您审核…</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="39q-vR-9OR" firstAttribute="top" secondItem="36W-Eg-bfX" secondAttribute="top" constant="24" id="1iG-8X-ExA"/>
+                            <constraint firstItem="nsn-8Y-VeH" firstAttribute="centerX" secondItem="36W-Eg-bfX" secondAttribute="centerX" id="NGT-dE-Kyh"/>
+                            <constraint firstItem="nsn-8Y-VeH" firstAttribute="top" secondItem="39q-vR-9OR" secondAttribute="bottom" constant="15" id="Omg-Uu-IBO"/>
+                            <constraint firstItem="39q-vR-9OR" firstAttribute="centerX" secondItem="36W-Eg-bfX" secondAttribute="centerX" id="bLb-ZB-Qlb"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="Nxf-CY-Xc3"/>
+                        <constraint firstAttribute="width" constant="200" id="PaW-R9-ZKo"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kED-zD-Dyj" secondAttribute="trailing" id="4D8-4O-rTN"/>
+                <constraint firstItem="kED-zD-Dyj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Acc-5O-9oO"/>
+                <constraint firstItem="CzF-9r-S2d" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RAV-8d-AMS"/>
+                <constraint firstItem="CzF-9r-S2d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TVC-W3-JIL"/>
+                <constraint firstAttribute="bottom" secondItem="kED-zD-Dyj" secondAttribute="bottom" id="bvS-Cg-1SY"/>
+                <constraint firstItem="kED-zD-Dyj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uiQ-sP-7UJ"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chat_back" width="22" height="22"/>
+        <image name="idcard_front" width="361" height="231"/>
+        <image name="reminder_success" width="40" height="40"/>
+    </resources>
+</document>

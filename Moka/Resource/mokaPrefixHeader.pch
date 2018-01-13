@@ -1,0 +1,168 @@
+//
+//  mokaPrefixHeader.pch
+//  Moka
+//
+//  Created by Knight on 2017/7/19.
+//  Copyright © 2017年 moka. All rights reserved.
+//
+
+#ifndef mokaPrefixHeader_pch
+#define mokaPrefixHeader_pch
+
+#ifdef DEBUG
+
+#define DLog( s, ... ) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(s), ##__VA_ARGS__] UTF8String] )
+
+#else
+
+#define DLog( s, ... )
+
+#endif
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define deviceUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+#define CDKeyWindow [UIApplication sharedApplication].keyWindow
+
+#define urlStr(str) [NSURL URLWithString:(str)]
+#define IMAGE(name) [[UIImage imageNamed:name] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)]
+
+#define NAV_HEIGHT 64
+#define TABBAR_HEIGHT 49
+#define FontSize 14.0f
+#define NAV_HEGHT 64.0f
+#define Font_Max_Size 17.0f
+#define NAV_My 44.0f
+
+#define CDVersionKey @"CFBundleShortVersionString"
+//当前版本
+#define currentPhoneSystemVersion      [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
+
+#define showGuideNear       @"ShowGuideNear"
+#define showGuideRecommend  @"ShowGuideRecommend"
+#define showGuideWallet     @"ShowGuideWallet"
+#define showGuideFeed       @"ShowGuideFeed"
+
+#define IOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >=7.0
+#define IOS8 [[[UIDevice currentDevice] systemVersion] floatValue] >=8.0
+#define IOS8_2 [[[UIDevice currentDevice] systemVersion] floatValue] >=8.2 && [[[UIDevice currentDevice] systemVersion] floatValue] < 9.0
+#define IOS9 [[[UIDevice currentDevice] systemVersion] floatValue] >=9.0
+#define IOS10 [[[UIDevice currentDevice] systemVersion] floatValue] >=10.0
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
+
+//R G B 颜色
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+#define commonBlueColor RGB_COLOR_HEX(0x7894F9)
+#define buttonDisableColor RGB_COLOR_HEX(0xE5E5E5)
+#define commonDarkGrayColor [UIColor colorWithRed:0.102 green:0.102 blue:0.102 alpha:1.00]
+#define commeColor [UIColor colorWithRed:203 / 255.0 green:52 /255.0 blue:0 alpha:1]
+#define commeBackgroudColor RGB_COLOR_HEX(0xFFFFFF)
+#define commonLightColor [UIColor colorWithWhite:0.100 alpha:0.500]
+#define RedPacketColor RGB_COLOR_HEX(0xE6484E)
+#define RedPacketColorLight RGB_COLOR_HEX(0xE36D6D)
+
+/**
+ * 颜色转换
+ */
+#define RGB_COLOR_ALPHA(r,g,b,a)    [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
+#define RGB_COLOR(r,g,b)            RGB_COLOR_ALPHA(r,g,b,1)
+#define RGB_COLOR_HEX(rgbValue)     RGB_COLOR(((float)(((rgbValue) & 0xFF0000) >> 16)), ((float)(((rgbValue) & 0xFF00)>>8)), ((float)((rgbValue) & 0xFF)))
+
+
+
+#define RCloudMessage_RCDCommonDefine_h
+
+#define DEFAULTS [NSUserDefaults standardUserDefaults]
+#define ShareApplicationDelegate [[UIApplication sharedApplication] delegate]
+#define HEXCOLOR(rgbValue)                                                                                             \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0                                               \
+green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0                                                  \
+blue:((float)(rgbValue & 0xFF)) / 255.0                                                           \
+alpha:1.0]
+#define IOS_FSystenVersion ([[[UIDevice currentDevice] systemVersion] floatValue])
+
+#define RCDDebugTestFunction 0
+
+#define RCDPrivateCloudManualMode 0
+
+#define RCDscreenWidth [UIScreen mainScreen].bounds.size.width
+#define RCDscreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define RCD_IS_IPHONEX (RCDscreenWidth>=375.0f && RCDscreenHeight>=812.0f)
+#define RCDExtraBottomHeight (RCD_IS_IPHONEX ? 34 : 0)
+#define RCDExtraTopHeight (RCD_IS_IPHONEX ? 24 : 0)
+
+
+
+
+//网络状态
+#define netStatusMy @"1"
+#define netStatusWaif  @"2"
+
+#define  InternetAvilable       @"InternetAvilable"
+
+
+// 手机型号
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define STRONG_SELF     __strong __typeof(weakSelf)strongSelf=weakSelf
+#define WEAK_SELF       __weak __typeof(self)weakSelf=self
+
+#define ALIPAY_SCHEME     @"2017120600417105"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <RongIMKit/RongIMKit.h>
+
+#import "MKBaseViewController.h"
+#import "MKNavigationController.h"
+#import "MKUtilHUD.h"
+#import "MKTool.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "MKNetworkManager.h"
+#import "MKUtilAction.h"
+#import "HTTPApi.h"
+#import "MyControlUIParts.h"
+#import "MKBasic.h"
+#import "DateUtil.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "UIImageView+UpsUrl.h"
+#import "UIButton+UpsUrl.h"
+#import "CDGetImageSize.h"
+#import "IBRefsh.h"
+#import "UIImage+scareUplodeImage.h"
+#import "MKLocationUtil.h"
+#import "MKChatTool.h"
+#import "NSString+AppendSring.h"
+#import "GCD.h"
+#import "NSString+CBNumberTwoLength.h"
+#import "UILabel+Copyable.h"
+#import "UIViewController+KSNoNetController.h"
+#import "CBStoreHouseRefreshControl.h"
+#import "JSBadgeView.h"
+#import "JsonDataPersistent.h"
+#import "IBShareView.h"
+#import "IBCommShare.h"
+
+
+#pragma mark - cocoa pods headers
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "IQKeyboardManager.h"
+#import "POP.h"
+#import "YYCategories.h"
+#import <SimpleKeychain/SimpleKeychain.h>
+#import "MZTimerLabel.h"
+
+
+
+#endif /* mokaPrefixHeader_pch */

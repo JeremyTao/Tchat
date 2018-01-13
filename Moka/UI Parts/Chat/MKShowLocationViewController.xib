@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKShowLocationViewController">
+            <connections>
+                <outlet property="mapView" destination="p22-rk-gz1" id="h3v-Yf-wdx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p22-rk-gz1">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zww-IL-JSd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navibar" translatesAutoresizingMaskIntoConstraints="NO" id="Xze-t0-9ja">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-uf-zSz">
+                            <rect key="frame" x="0.0" y="24" width="70" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="JIm-0b-oLp"/>
+                                <constraint firstAttribute="width" constant="70" id="trC-yi-XW3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="mdT-LP-CbL"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="位置信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-V1-pKT">
+                            <rect key="frame" x="151.5" y="33" width="73.5" height="22"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fcw-V1-pKT" firstAttribute="centerY" secondItem="LSY-uf-zSz" secondAttribute="centerY" id="8QE-Zg-KbN"/>
+                        <constraint firstAttribute="bottom" secondItem="Xze-t0-9ja" secondAttribute="bottom" id="IZk-I8-W9T"/>
+                        <constraint firstItem="Xze-t0-9ja" firstAttribute="leading" secondItem="Zww-IL-JSd" secondAttribute="leading" id="MC8-Hk-9Xj"/>
+                        <constraint firstAttribute="bottom" secondItem="LSY-uf-zSz" secondAttribute="bottom" id="YAt-Vx-gIc"/>
+                        <constraint firstAttribute="height" constant="64" id="YEj-GH-OsB"/>
+                        <constraint firstItem="Xze-t0-9ja" firstAttribute="top" secondItem="Zww-IL-JSd" secondAttribute="top" id="czo-2N-UN8"/>
+                        <constraint firstItem="fcw-V1-pKT" firstAttribute="centerX" secondItem="Zww-IL-JSd" secondAttribute="centerX" id="dH2-Zv-kTs"/>
+                        <constraint firstItem="LSY-uf-zSz" firstAttribute="leading" secondItem="Zww-IL-JSd" secondAttribute="leading" id="ihW-fF-f8l"/>
+                        <constraint firstAttribute="trailing" secondItem="Xze-t0-9ja" secondAttribute="trailing" id="yqD-SW-egQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="p22-rk-gz1" secondAttribute="trailing" id="8xV-85-Qtd"/>
+                <constraint firstAttribute="trailing" secondItem="Zww-IL-JSd" secondAttribute="trailing" id="CF5-Sy-4Ng"/>
+                <constraint firstItem="p22-rk-gz1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="JgM-df-jXO"/>
+                <constraint firstItem="Zww-IL-JSd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PH7-9p-4RS"/>
+                <constraint firstItem="Zww-IL-JSd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VrP-om-tML"/>
+                <constraint firstAttribute="bottom" secondItem="p22-rk-gz1" secondAttribute="bottom" id="YlV-rz-zL6"/>
+                <constraint firstItem="p22-rk-gz1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cjz-2g-SdW"/>
+            </constraints>
+            <point key="canvasLocation" x="-18" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navibar" width="750" height="88"/>
+    </resources>
+</document>

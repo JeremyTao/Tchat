@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopSearchCell" id="gTV-IL-0wX" customClass="IBTopSearchCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="89" height="26"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="89" height="26"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sht-FA-jJd">
+                        <rect key="frame" x="0.0" y="0.0" width="89" height="26"/>
+                        <color key="backgroundColor" red="0.93640625" green="0.93640625" blue="0.93640625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg2-5g-xR2">
+                        <rect key="frame" x="28.5" y="3.5" width="32" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19.5" id="Xgn-W9-O8h"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="vTV-HU-V5r"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.97375490200000003" green="0.97375490200000003" blue="0.97375490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sht-FA-jJd" secondAttribute="bottom" id="Dcb-44-c4d"/>
+                <constraint firstItem="sht-FA-jJd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pvh-j7-oxH"/>
+                <constraint firstItem="Fg2-5g-xR2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="VqM-qc-yfM"/>
+                <constraint firstItem="Fg2-5g-xR2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="XwS-N9-9MO"/>
+                <constraint firstAttribute="trailing" secondItem="sht-FA-jJd" secondAttribute="trailing" id="epT-dG-xI4"/>
+                <constraint firstItem="sht-FA-jJd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="m5i-la-14N"/>
+            </constraints>
+            <size key="customSize" width="89" height="26"/>
+            <connections>
+                <outlet property="roundCornerBGLabel" destination="sht-FA-jJd" id="R6C-xA-css"/>
+                <outlet property="wordLabel" destination="Fg2-5g-xR2" id="LBZ-QZ-q56"/>
+            </connections>
+            <point key="canvasLocation" x="435.5" y="354"/>
+        </collectionViewCell>
+    </objects>
+</document>

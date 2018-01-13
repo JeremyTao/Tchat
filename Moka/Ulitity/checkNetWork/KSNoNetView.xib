@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KSNoNetView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIL-pq-B6d" customClass="RadiusButton">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="reloadNetworkDataSource:" destination="iN0-l3-epB" eventType="touchUpInside" id="TTU-NH-6hn"/>
+                    </connections>
+                </button>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_wifi" translatesAutoresizingMaskIntoConstraints="NO" id="btS-0u-3Ef">
+                    <rect key="frame" x="95" y="147.5" width="130" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="7Ov-nw-7HT"/>
+                        <constraint firstAttribute="width" constant="130" id="M1J-pH-dak"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="很抱歉，网络出错啦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYQ-RG-JNc">
+                    <rect key="frame" x="4" y="262.5" width="312" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Ios-mE-xtm"/>
+                        <constraint firstAttribute="width" constant="312" id="chn-Kt-qmv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UIL-pq-B6d" secondAttribute="bottom" id="2gQ-cE-HNe"/>
+                <constraint firstItem="SYQ-RG-JNc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5mo-av-tJt"/>
+                <constraint firstItem="UIL-pq-B6d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DR8-7s-PFW"/>
+                <constraint firstItem="UIL-pq-B6d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gg3-2S-RJt"/>
+                <constraint firstItem="btS-0u-3Ef" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="br4-NG-CLO"/>
+                <constraint firstItem="SYQ-RG-JNc" firstAttribute="top" secondItem="btS-0u-3Ef" secondAttribute="bottom" constant="10" id="ee7-oV-tz4"/>
+                <constraint firstItem="btS-0u-3Ef" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="iCh-Cb-DXN"/>
+                <constraint firstAttribute="trailing" secondItem="UIL-pq-B6d" secondAttribute="trailing" id="n67-cC-gKx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="237" y="233"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no_wifi" width="111" height="88"/>
+    </resources>
+</document>

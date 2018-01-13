@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CBNOData">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="errorONe" translatesAutoresizingMaskIntoConstraints="NO" id="It1-Dg-kve">
+                    <rect key="frame" x="148" y="254.5" width="79" height="98"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络不给力哦～" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnN-3t-5t4">
+                    <rect key="frame" x="134.5" y="372.5" width="107.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-9S-5m8" customClass="RadiusButton">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="refshBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="5MK-8a-knN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CC5-9S-5m8" secondAttribute="bottom" id="5XY-3N-Fq7"/>
+                <constraint firstItem="It1-Dg-kve" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ewk-Ui-aul"/>
+                <constraint firstItem="CC5-9S-5m8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GJx-7E-ixG"/>
+                <constraint firstItem="WnN-3t-5t4" firstAttribute="top" secondItem="It1-Dg-kve" secondAttribute="bottom" constant="20" id="P04-0S-bhb"/>
+                <constraint firstItem="It1-Dg-kve" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-30" id="bQN-LD-7y9"/>
+                <constraint firstItem="CC5-9S-5m8" firstAttribute="centerX" secondItem="WnN-3t-5t4" secondAttribute="centerX" id="lZf-1c-vzO"/>
+                <constraint firstItem="WnN-3t-5t4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="m4h-k9-pLb"/>
+                <constraint firstItem="CC5-9S-5m8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oXe-9U-X4O"/>
+                <constraint firstAttribute="trailing" secondItem="CC5-9S-5m8" secondAttribute="trailing" id="wbR-l3-FLI"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="errorONe" width="79" height="98"/>
+    </resources>
+</document>

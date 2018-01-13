@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="alipayChargeBillsCell">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="70.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="零钱红包-来自昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G28-v7-i4I">
+                        <rect key="frame" x="22" y="7" width="121" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="EBn-JO-2mb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-12-06 18:12:11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMq-zU-EvL">
+                        <rect key="frame" x="22" y="35" width="114.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+12.11" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anr-Zv-ZME">
+                        <rect key="frame" x="332" y="7" width="50" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易完成" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLp-4c-f8e">
+                        <rect key="frame" x="332.5" y="35" width="49.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xLp-4c-f8e" firstAttribute="trailing" secondItem="anr-Zv-ZME" secondAttribute="trailing" id="3hH-Ks-FXR"/>
+                    <constraint firstItem="TMq-zU-EvL" firstAttribute="leading" secondItem="G28-v7-i4I" secondAttribute="leading" id="EGC-ef-Tu5"/>
+                    <constraint firstItem="anr-Zv-ZME" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Mjq-eA-wMR"/>
+                    <constraint firstAttribute="trailing" secondItem="anr-Zv-ZME" secondAttribute="trailing" constant="22" id="PHI-oa-3HH"/>
+                    <constraint firstItem="G28-v7-i4I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="SXP-m3-HwT"/>
+                    <constraint firstItem="xLp-4c-f8e" firstAttribute="centerY" secondItem="TMq-zU-EvL" secondAttribute="centerY" id="gtM-Gc-kzi"/>
+                    <constraint firstItem="G28-v7-i4I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="lR3-gU-40g"/>
+                    <constraint firstItem="TMq-zU-EvL" firstAttribute="top" secondItem="G28-v7-i4I" secondAttribute="bottom" constant="8" id="nZm-aa-jc0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="crashLabel" destination="anr-Zv-ZME" id="SLR-Ph-UK6"/>
+                <outlet property="dateLabel" destination="TMq-zU-EvL" id="n3D-x5-C8Z"/>
+                <outlet property="nameLabel" destination="G28-v7-i4I" id="Yuk-pp-0Vt"/>
+                <outlet property="statusLabel" destination="xLp-4c-f8e" id="U7K-jc-VOk"/>
+            </connections>
+            <point key="canvasLocation" x="76" y="67.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKVerfiyCodeViewController">
+            <connections>
+                <outlet property="codeView" destination="GEF-qI-40K" id="4FJ-Jz-7qX"/>
+                <outlet property="resendCodeButton" destination="V3p-gv-K7j" id="eR9-zq-ALB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a  Verification code " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYB-jZ-v4U">
+                    <rect key="frame" x="30" y="100" width="315" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuv-YX-Bvy">
+                    <rect key="frame" x="30" y="308.5" width="315" height="50"/>
+                    <color key="backgroundColor" red="0.2156862745" green="0.60784313729999995" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="NRy-fR-7NE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <state key="normal" title="继续">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextStepButtonClicked:" destination="-1" eventType="touchUpInside" id="kAG-fZ-EAU"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEF-qI-40K" customClass="MQVerCodeInputView">
+                    <rect key="frame" x="40" y="159.5" width="295" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cWW-ho-Fmx"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3p-gv-K7j" customClass="JKCountDownButton">
+                    <rect key="frame" x="94.5" y="229.5" width="185" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Resend the verification code">
+                        <color key="titleColor" red="0.2142769108" green="0.60598769620000004" blue="0.87527975800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="V3p-gv-K7j" firstAttribute="top" secondItem="GEF-qI-40K" secondAttribute="bottom" constant="20" id="02S-Oh-q9N"/>
+                <constraint firstItem="QYB-jZ-v4U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="50x-Ro-dcA"/>
+                <constraint firstAttribute="trailing" secondItem="GEF-qI-40K" secondAttribute="trailing" constant="40" id="J4A-Fh-vZ1"/>
+                <constraint firstItem="vuv-YX-Bvy" firstAttribute="top" secondItem="V3p-gv-K7j" secondAttribute="bottom" constant="50" id="LqU-u7-xhb"/>
+                <constraint firstAttribute="trailing" secondItem="QYB-jZ-v4U" secondAttribute="trailing" constant="30" id="MfD-7y-uso"/>
+                <constraint firstItem="V3p-gv-K7j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b9q-od-6kH"/>
+                <constraint firstItem="vuv-YX-Bvy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="dUT-c8-Iom"/>
+                <constraint firstAttribute="trailing" secondItem="vuv-YX-Bvy" secondAttribute="trailing" constant="30" id="nc1-OZ-rQA"/>
+                <constraint firstItem="GEF-qI-40K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="po8-rV-Hcd"/>
+                <constraint firstItem="QYB-jZ-v4U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="qqJ-Uh-YcE"/>
+                <constraint firstItem="GEF-qI-40K" firstAttribute="top" secondItem="QYB-jZ-v4U" secondAttribute="bottom" constant="40" id="u0E-sp-tCP"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
